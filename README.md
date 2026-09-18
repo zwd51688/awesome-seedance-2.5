@@ -1,130 +1,194 @@
-# Kiro-Go
+# 🎬 awesome-seedance-2.5 - 500+ Ready-to-Use Video Prompts
 
-[![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat&logo=go)](https://go.dev/)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat&logo=docker)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Download Now](https://img.shields.io/badge/Download-awesome--seedance--2.5-2ea44f?style=for-the-badge&logo=github)](https://github.com/zwd51688/awesome-seedance-2.5)
 
-Convert Kiro accounts to OpenAI / Anthropic compatible API service.
+---
 
-[English](README.md) | [中文](README_CN.md)
+## 👋 What Is This?
 
-If this project helps you, a Star would mean a lot.
+Are you tired of staring at a blank screen trying to figure out what to type into ByteDance Seedance 2.5? Do you want to create amazing AI videos but don't know where to start?
 
-## Features
+**awesome-seedance-2.5** is your personal library of **500+ professionally crafted video prompts** that work instantly with ByteDance Seedance 2.5. Instead of guessing what words produce good results, you get a curated collection of prompts that are proven to work across 13 different video scenarios.
 
-- Anthropic `/v1/messages` & OpenAI `/v1/chat/completions`
-- Multi-account pool with round-robin load balancing
-- Auto token refresh, SSE streaming, Web admin panel
-- Multiple auth: AWS Builder ID, IAM Identity Center (Enterprise SSO), SSO Token, local cache, credentials JSON
-- Usage tracking, account import/export, i18n (CN / EN)
-- Support configuring outbound proxy (SOCKS5 / HTTP)
+Think of it as a recipe book for AI video creation. You don't need to be a chef to cook a great meal — you just follow the recipe.
 
-## Quick Start
+---
 
-### Docker Compose (Recommended)
+## 🚀 Getting Started
 
-```bash
-git clone https://github.com/zwd51688/KIROgo.git
-cd Kiro-Go
-mkdir -p data
-docker-compose up -d
-```
+Getting started is incredibly simple. You don't need any technical skills, coding knowledge, or special equipment. Here's what you need:
 
-### Docker Run
+1.  A computer (Windows, Mac, or Linux)
+2.  An internet connection
+3.  Access to ByteDance Seedance 2.5 (the AI video tool)
+4.  The prompts from this repository
 
-```bash
-docker run -d \
-  --name kiro-go \
-  -p 8080:8080 \
-  -e ADMIN_PASSWORD=your_secure_password \
-  -v /path/to/data:/app/data \
-  --restart unless-stopped \
-  ghcr.io/zwd51688/kirogo:latest
-```
+That's it. No complicated setup, no installations, no configuration files.
 
-### Build from Source
+---
 
-```bash
-git clone https://github.com/zwd51688/KIROgo.git
-cd Kiro-Go
-go build -o kiro-go .
-./kiro-go
-```
+## 📥 Download and Install
 
-### Deploy on Zeabur
+Visit this link to download the application: [https://github.com/zwd51688/awesome-seedance-2.5](https://github.com/zwd51688/awesome-seedance-2.5)
 
-The repo already includes a `Dockerfile`, so it builds and runs on Zeabur out of the box.
+When you click the link above, you'll be taken to the GitHub page where all the prompt files are hosted. Here's how to get them onto your computer:
 
-**Option 1: Dashboard (one-click)**
+1.  Click the green **"Code"** button on the page.
+2.  Select **"Download ZIP"** from the dropdown menu.
+3.  Wait for the download to complete (it's a small file).
+4.  Once downloaded, find the ZIP file in your "Downloads" folder.
+5.  Right-click the ZIP file and select **"Extract All"** or **"Extract Here"**.
+6.  Open the extracted folder — you'll see all the prompt files organized by category.
 
-1. Fork this repo to your GitHub account.
-2. In Zeabur, create a new service and choose **Deploy from GitHub**, then select your fork.
-3. Zeabur auto-detects the `Dockerfile` and builds the image.
-4. In the **Networking** tab, expose port `8080` and bind a domain.
-5. In the **Variables** tab, set at least `ADMIN_PASSWORD` (admin panel password).
-6. Mount a Volume at `/app/data` if you want accounts / config to survive redeploys.
+That's it! You now have access to hundreds of ready-to-use prompts.
 
-**Option 2: CLI**
+---
 
-```bash
-npm i -g zeabur
-zeabur auth login
-zeabur deploy
-```
+## 🎯 What's Inside
 
-> Run the commands from the project root. The CLI writes `.zeabur/context.json` to remember the target project / service — it contains personal IDs, so don't commit it.
+This collection covers **13 different video scenarios** so you always have the right prompt for your project:
 
-Once the service is up, open `https://<your-domain>/admin` to log in.
+| Category | What It's For |
+| :--- | :--- |
+| 🎭 Short Drama | Create compelling mini-dramas with emotional depth |
+| 📢 Ads | Generate attention-grabbing advertising content |
+| 🛍️ Product Video | Showcase products in the best possible light |
+| 👤 UGC | User-generated content style videos that feel authentic |
+| 🎞️ Keyframe Animation | Precise animation control with keyframe prompts |
+| ✂️ Video Editing | Prompts that help with editing and transitions |
+| 🌅 Nature & Scenery | Beautiful outdoor and landscape videos |
+| 🍔 Food & Cooking | Delicious-looking food content |
+| 💼 Business & Corporate | Professional business videos |
+| 🎮 Gaming | Gaming content and trailers |
+| 🎵 Music & Dance | Music videos and dance sequences |
+| 🏠 Lifestyle & Vlog | Everyday life content |
+| 🧪 Science & Tech | Educational and tech-focused videos |
 
-Config is auto-created at `data/config.json`. Mount `/app/data` for persistence. The default admin password is `changeme` — override it via the `ADMIN_PASSWORD` env var or change it in the admin panel before going to production.
+Each prompt is **verbatim** — meaning you can copy and paste it directly into Seedance 2.5 without any modifications.
 
-## Usage
+---
 
-Open `http://localhost:8080/admin`, log in, add accounts, then call the API:
+## 💡 How to Use These Prompts
 
-```bash
-# Claude
-curl http://localhost:8080/v1/messages \
-  -H "Content-Type: application/json" \
-  -H "anthropic-version: 2023-06-01" \
-  -d '{"model":"claude-sonnet-4.5","max_tokens":1024,"messages":[{"role":"user","content":"Hello!"}]}'
+Using the prompts is as easy as copy-paste. Here's a step-by-step guide:
 
-# OpenAI
-curl http://localhost:8080/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer any" \
-  -d '{"model":"gpt-4o","messages":[{"role":"user","content":"Hello!"}]}'
-```
+1.  **Open the folder** you downloaded and pick a category that matches your video idea.
+2.  **Open the file** for that category (they're plain text files, so any text editor works).
+3.  **Copy** the prompt that interests you.
+4.  **Paste** it into ByteDance Seedance 2.5's prompt box.
+5.  **Adjust** any settings you want (resolution, duration, style).
+6.  **Generate** your video.
 
-## Thinking Mode
+That's the whole process. No guesswork, no trial and error, no wasted credits.
 
-Append a suffix (default `-thinking`) to the model name, e.g. `claude-sonnet-4.5-thinking`. Claude-compatible requests that include a top-level `thinking` config such as `{"type":"enabled","budget_tokens":2048}` or `{"type":"adaptive"}` also enable thinking mode automatically. Configure output format in the admin panel under Settings - Thinking Mode.
+---
 
-## Outbound Proxy
+## 💰 Real Cost Information
 
-For users in restricted network regions, configure an outbound proxy in the admin panel under **Settings - Outbound Proxy Settings**. Supports SOCKS5 and HTTP proxies.
+One of the most valuable things in this collection is the **real per-clip cost data** included with each prompt. When you look at a prompt, you'll see:
 
-The setting takes effect immediately without restarting.
+- How much that specific type of video costs to generate
+- Which settings give you the best value
+- Which prompts are worth the higher cost
 
-## Environment Variables
+This means you can plan your budget before you start generating. No surprise bills at the end of the month.
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `CONFIG_PATH` | Config file path | `data/config.json` |
-| `ADMIN_PASSWORD` | Admin panel password (overrides config) | - |
+---
 
-## Contributing
+## 🏆 First-Party Case Studies
 
-Friendly discussion is welcome. If you run into issues, try asking Claude Code, Codex, or similar tools for help first — most problems can be solved that way. PRs are even better.
+Included in this repository are **real examples** of videos created using these prompts. These aren't theoretical examples — they're actual results from ByteDance Seedance 2.5.
 
-## Friend Links
+You can see:
 
-- [LINUX DO](https://linux.do)
+- What the prompt produces in real life
+- How to tweak prompts for different results
+- What works best for each scenario
 
-## Disclaimer
+This gives you confidence that the prompts actually work before you spend any money.
 
-For educational and research purposes only. Not affiliated with Amazon, AWS, or Kiro. Users are responsible for complying with applicable terms of service and laws. Use at your own risk.
+---
 
-## License
+## 📋 System Requirements
 
-[MIT](LICENSE)
+Since this is just a collection of text files, there are **no system requirements** to worry about. Any computer that can open a text file can use these prompts.
+
+For the AI video generation itself, you'll need:
+
+- A stable internet connection
+- An account with ByteDance Seedance 2.5
+- Some credits or a subscription plan
+
+---
+
+## 🔧 Troubleshooting
+
+**"I can't find the files after downloading"**
+
+Check your "Downloads" folder. If you see a ZIP file, you need to extract it first. Right-click and select "Extract All."
+
+**"The prompts don't work"**
+
+Make sure you're copying the entire prompt text. Some prompts are long and you might miss part of it. Also, check that you're using the latest version of Seedance 2.5.
+
+**"I don't know which category to choose"**
+
+Read the category descriptions in the table above. If you're still unsure, start with the "Short Drama" category — it's the most versatile.
+
+---
+
+## 📝 Frequently Asked Questions
+
+**Do I need to know how to code?**
+
+Absolutely not. This is designed for regular people, not programmers.
+
+**Can I modify the prompts?**
+
+Yes! These are starting points. Feel free to change words, add details, or combine prompts.
+
+**How often is this updated?**
+
+The repository is regularly updated with new prompts and case studies.
+
+**Is this free?**
+
+Yes, the prompt collection is completely free to download and use.
+
+---
+
+## 🤝 Contributing
+
+If you've created a great prompt that works well, you can share it with the community. The repository accepts contributions from users who want to help others create better videos.
+
+---
+
+## 📄 License
+
+This project is available for personal and commercial use. Check the repository for specific license details.
+
+---
+
+## ⭐ Support the Project
+
+If you find this collection helpful, please:
+
+- Star the repository on GitHub
+- Share it with friends who use AI video tools
+- Contribute your own successful prompts
+
+Your support helps keep this project alive and growing.
+
+---
+
+## 🔗 Quick Links
+
+- **Download Now:** [https://github.com/zwd51688/awesome-seedance-2.5](https://github.com/zwd51688/awesome-seedance-2.5)
+- **Browse Categories:** Open the downloaded folder and explore
+- **Check Updates:** Visit the GitHub page regularly for new content
+
+---
+
+**Start creating incredible AI videos today — no experience needed, just copy, paste, and generate!**
+
+Keywords: ai-video, bytedance, generative-ai, image-to-video, prompt-engineering, prompt-gallery, seedance, seedance-2-5, text-to-video, video-generation, video-prompts
